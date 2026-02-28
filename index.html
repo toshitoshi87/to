@@ -11,11 +11,21 @@
 body {
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
-  background: url(1F6DD2D4-B3C6-42F1-A74E-FA829E24531D.jpeg) center/cover no-repeat fixed;
+  background: url(1F6DD2D4-B3C6-42F1-A74E-FA829E24531D.jpeg) no-repeat center center fixed;
+  background-size: cover;
   color: white;
   text-align: center;
+  position: relative;
 }
-  
+
+/* 暗くするオーバーレイ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: -1;
+}
 
 .overlay {
   min-height: 100vh;
